@@ -1,3 +1,4 @@
+
 let products = [];
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let currentProduct = null;
