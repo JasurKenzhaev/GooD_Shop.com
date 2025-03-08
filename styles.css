@@ -85,6 +85,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 1em;
+    padding-bottom: 60px; /* Отступ снизу, чтобы контент не перекрывал кнопки */
 }
 
 .gallery {
@@ -473,6 +474,32 @@ body.dark-mode .chat-container {
     transform: scale(1.2);
 }
 
+/* Управляющие кнопки внизу */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #d2b48c;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    z-index: 10; /* Увеличиваем z-index, чтобы кнопки всегда были поверх контента */
+}
+
+.bottom-nav .nav-button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.bottom-nav .nav-button:hover {
+    transform: scale(1.2);
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
     header {
@@ -499,6 +526,7 @@ body.dark-mode .chat-container {
 
     main {
         padding: 0.5em;
+        padding-bottom: 60px; /* Отступ снизу, чтобы контент не перекрывал кнопки */
     }
 
     .gallery {
@@ -538,5 +566,15 @@ body.dark-mode .chat-container {
         bottom: 5px;
         left: 5px;
         font-size: 20px;
+    }
+
+    /* Adjust bottom navigation for mobile */
+    .bottom-nav {
+        padding: 5px;
+    }
+
+    .bottom-nav .nav-button {
+        font-size: 20px;
+        padding: 5px;
     }
 }
